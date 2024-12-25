@@ -1,0 +1,197 @@
+.........0.........
+
+en
+config t
+int f0/0
+ip add 201.168.10.1 255.255.255.192A
+no shut
+ex
+int s2/0
+ip add 201.168.10.249 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 192.192.192.21 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.11.20
+network 201.168.10.248
+network 201.168.10.0
+no auto summary
+exit
+
+........1..........
+
+en
+config t
+int f0/0
+ip add 201.168.10.209 255.255.255.240
+no shut
+ex
+int s2/0
+ip add 201.168.10.250 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 201.168.10.253 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.10.208
+network 201.168.10.248
+network 201.168.10.252
+no auto summary
+exit
+
+.........2.......
+
+en
+config t
+int f0/0
+ip add 201.168.10.161 255.255.255.224
+no shut
+ex
+int s2/0
+ip add 201.168.10.254 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 201.168.11.1 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.11.0
+network 201.168.10.160
+network 201.168.10.252
+no auto summary
+exit
+
+.........3........
+
+en
+config t
+int f0/0
+ip add 201.168.10.65 255.255.255.192
+no shut
+ex
+int s2/0
+ip add 201.168.11.2 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 201.168.11.5 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.11.0
+network 201.168.10.64
+network 201.168.11.4
+no auto summary
+exit
+
+......4.........
+
+en
+config t
+int f0/0
+ip add 201.168.10.129 255.255.255.128
+no shut
+ex
+int s2/0
+ip add 201.168.11.6 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 201.168.11.9 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.10.128
+network 201.168.11.8
+network 201.168.11.4
+no auto summary
+exit
+
+......5.........
+en
+config t
+int f0/0
+ip add 201.168.10.193 255.255.255.240
+no shut
+ex
+int s2/0
+ip add 201.168.11.10 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 201.168.11.13 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.10.192
+network 201.168.11.8
+network 201.168.11.12
+no auto summary
+exit
+
+.....6.....
+
+en
+config t
+int f0/0
+ip add 201.168.10.241 255.255.255.248
+no shut
+ex
+int s2/0
+ip add 201.168.11.14 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 201.168.11.17 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.10.240
+network 201.168.11.16
+network 201.168.11.12
+no auto summary
+exit
+
+....7......
+en
+config t
+int f0/0
+ip add 201.168.10.225 255.255.255.224
+no shut
+ex
+int s2/0
+ip add 2201.168.11.18 255.255.255.252
+no shut
+ex
+int s3/0
+ip add 201.168.11.22 255.255.255.252
+clock rate 64000
+no shut
+ex
+router rip
+version 2
+network 201.168.10.224
+network 201.168.11.20
+network 201.168.11.16
+no auto summary
+exit
